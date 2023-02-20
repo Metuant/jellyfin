@@ -58,7 +58,7 @@ namespace Emby.Server.Implementations.Data
         /// Gets the cache size.
         /// </summary>
         /// <value>The cache size or null.</value>
-        protected virtual int? CacheSize => null;
+        protected virtual int? CacheSize => -65536;
 
         /// <summary>
         /// Gets the locking mode. <see href="https://www.sqlite.org/pragma.html#pragma_locking_mode" />.
@@ -81,14 +81,14 @@ namespace Emby.Server.Implementations.Data
         /// Gets the page size.
         /// </summary>
         /// <value>The page size or null.</value>
-        protected virtual int? PageSize => null;
+        protected virtual int? PageSize => 9999;
 
         /// <summary>
         /// Gets the temp store mode.
         /// </summary>
         /// <value>The temp store mode.</value>
         /// <see cref="TempStoreMode"/>
-        protected virtual TempStoreMode TempStore => TempStoreMode.Default;
+        protected virtual TempStoreMode TempStore => TempStoreMode.Memory;
 
         /// <summary>
         /// Gets the synchronous mode.
